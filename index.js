@@ -51,7 +51,7 @@ const checkJwt = ({ uri, audience, issuer }) => jwt({
 
   // Validate the audience and the issuer.
   audience: audience,
-  issuer: audience,
+  issuer: issuer,
   algorithms: ['RS256']
 });
 
