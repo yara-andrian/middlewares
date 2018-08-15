@@ -1,0 +1,15 @@
+{
+  "name": "middlewares",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn index.js"
+  },
+  "keywords": [],
+  "author": "Andrian K",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
