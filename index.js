@@ -39,7 +39,7 @@ const flashMessages = function (req, res, next) {
   next();
 };
 
-const checkJwt = ({ uri, audience, issuer }) => jwt({
+const checkJwt = ({ secret, audience, issuer }) => jwt({
   secret: secret,
   // Validate the audience and the issuer.
   audience: audience,
