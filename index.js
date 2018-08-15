@@ -1,7 +1,5 @@
 const _ = require('lodash');
 const jwt = require('express-jwt');
-const jwtAuthz = require('express-jwt-authz');
-const jwksRsa = require('jwks-rsa');
 
 const theme = function (req, res, next) {
   if (req.query.theme) {
@@ -42,13 +40,7 @@ const flashMessages = function (req, res, next) {
 };
 
 const checkJwt = ({ uri, audience, issuer }) => jwt({
-  secret: jwksRsa.expressJwtSecret({
-    cache: true,
-    rateLimit: true,
-    jwksRequestsPerMinute: 5,
-    jwksUri: uri
-  }),
-
+  secret: secret,
   // Validate the audience and the issuer.
   audience: audience,
   issuer: issuer,
